@@ -15,16 +15,38 @@
 
 Bark is a transformer-based text-to-audio model created by [Suno](https://suno.ai). Bark can generate highly realistic, multilingual speech as well as other audio - including music, background noise and simple sound effects. The model can also produce nonverbal communications like laughing, sighing and crying. To support the research community, we are providing access to pretrained model checkpoints, which are ready for inference and available for commercial use.
 
-## API added
-I, Vedant Singh, have added a Flask API which accepts text in json format and responds in audio/wav format.
-In a development environment, use http://localhost:5000/synthesize .
-The request should look like:
-```json
+## Text-to-Speech Flask API
+This repository contains a Flask API for performing Text-to-Speech (TTS) using the Bark AI model. The API allows you to generate voice audio by sending a POST request with text as input.
+### Usage
+To use the Flask API for TTS, follow these steps:
+
+1. Start the Flask server:
+```
+python app.py
+```
+2. Send a POST request to the /synthesize endpoint with the desired text as JSON payload. For example:
+
+```bash
+POST /synthesize
+Content-Type: application/json
+
 {
-  "text": "Hello, my name is Suno. And, uh — and I like pizza. [laughs] But I also have other interests such as playing tic tac toe."
+    "text": "Hello, my name is Suno. And, uh — and I like pizza. [laughs] But I also have other interests such as playing tic tac toe."
 }
 ```
-And the response would be a .wav audio file.
+This will generate the voice audio corresponding to the provided text.
+
+3. The API will respond with the generated audio file in WAV format. You can download and play the audio file locally.
+
+### Additional Notes
+
+The API utilizes the Bark AI model for TTS. Make sure the model is properly downloaded and configured for accurate results.
+Customize the API according to your requirements, such as modifying the API endpoints, adding authentication, or implementing rate limiting.
+Feel free to modify and adapt this API as needed for your specific use case.
+
+If you have any questions or run into any issues, please create an issue in this repository.
+
+Happy text-to-speech generation!
 
 ## ⚠ Disclaimer
 Bark was developed for research purposes. It is not a conventional text-to-speech model but instead a fully generative text-to-audio model, which can deviate in unexpected ways from provided prompts. Suno does not take responsibility for any output generated. Use at your own risk, and please act responsibly.
