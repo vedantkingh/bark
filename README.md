@@ -17,6 +17,7 @@ Bark is a transformer-based text-to-audio model created by [Suno](https://suno.a
 
 ## API added
 I, Vedant Singh have added a Flask API which accepts text in json format and responds in audio/wav format.
+In a development environment, use http://localhost:5000/synthesize .
 The request should look like:
 ```json
 {
