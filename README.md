@@ -16,6 +16,11 @@
 Bark is a transformer-based text-to-audio model created by [Suno](https://suno.ai). Bark can generate highly realistic, multilingual speech as well as other audio - including music, background noise and simple sound effects. The model can also produce nonverbal communications like laughing, sighing and crying. To support the research community, we are providing access to pretrained model checkpoints, which are ready for inference and available for commercial use.
 
 ## Text-to-Speech Flask API
+
+**Major Update:**
+- MP3 version now uploaded.
+- You can now also make a Docker image using the Dockerfile.
+
 This repository contains a Flask API for performing Text-to-Speech (TTS) using the Bark AI model. The API allows you to generate voice audio by sending a POST request with text as input.
 ### Usage
 To use the Flask API for TTS, follow these steps:
